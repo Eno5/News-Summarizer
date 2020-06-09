@@ -71,7 +71,7 @@ def thread_heavy(func=None, max_workers=None, return_val=False):
                 self.do_work()
 
         with SomeClass() as s:
-            s.do_work(1, 2, [1,2], [3,4])
+            s.work(1, 2, [1,2], [3,4])
     
     
     
