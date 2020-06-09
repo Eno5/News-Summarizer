@@ -34,7 +34,7 @@ class News(object):
     def get_article_data(self):
         return self._pull_info(self.results)
 
-    def search(self, query, area='com', ncr=False, void=True, time_period=False, sort_by_date=True, first_page=0):
+    def search(self, query, area='com', ncr=False, void=True, time_period=False, sort_by_date=False, first_page=0):
         for i in range(first_page, first_page + self.pages):
             url = _get_search_url(query, i, lang=self.lang, area=area, ncr=ncr, time_period=time_period, sort_by_date=sort_by_date)
             print(f'Search URL: {url}&tbm=nws')
